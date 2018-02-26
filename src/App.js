@@ -45,10 +45,6 @@ class App extends Component {
     this.props.dispatch(addTicketTitleChange(e.target.value))
   }
 
-  onDone = (ticket) => {
-    this.props.dispatch(ticketChangeStatus(ticket.id, STATUS_DONE))
-  }
-
   changeStatus = (ticket, status) => {
     this.props.dispatch(ticketChangeStatus(ticket.id, status))
   }
