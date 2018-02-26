@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Ticket from "./Ticket";
-import TicketForm from "./components/tickets/ticket/form"
+import Ticket from "./components/Tickets/Ticket";
+import TicketForm from "./components/Tickets/Ticket/Form"
 import Loader from "./components/Loader"
 import {connect} from 'react-redux';
 import {addTicket, addTicketTitleChange} from "./services/actions/tickets";
