@@ -1,0 +1,18 @@
+{
+  "name": "incube8-react-template",
+  "version": "1.0.0",
+  "description": "Have fun!",
+  "keywords": [],
+  "homepage": "https://codesandbox.io/s/23p28kn6kn",
+  "main": "index.js",
+  "dependencies": {
+    "prop-types": "15.6.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-redux": "5.0.7",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0"
+  }
+}
