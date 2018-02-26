@@ -36,7 +36,6 @@ class Ticket extends Component {
       <div style={styles.ticket} >
         {/* Ticket description */}
         <h4>{ticket.title}</h4>
-        <div>{ticket.desc}</div>
         {/* Ticket actions [Done/Not Fix/Close]. Modify to display them properly */}
         <div>
           <button>Done</button>

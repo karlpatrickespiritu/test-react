@@ -1,16 +1,26 @@
-import {STATUS_IN_PROGRESS, TICKETS_ADD_REQUEST} from "../actions/tickets";
+import {
+  STATUS_IN_PROGRESS, TICKETS_ADD_REQUEST, ADD_TICKET_TITLE_CHANGE,
+  TICKETS_ADD_SUCCESS
+} from "../actions/tickets";
+import hash from "../utils/hash";
 
 let defaultTicketData = {
-  id: 0,
+  id: hash.generateSimple(),
   title: 'Go Home',
-  desc: 'Get a taxi outside.',
   status: STATUS_IN_PROGRESS
 };
+
+let defaultTicketAddData = {
+  id: null,
+  title: '',
+  status: STATUS_IN_PROGRESS
+}
 
 const tickets = (
   state = {
     isRequesting: false,
-    data: [defaultTicketData]
+    data: [defaultTicketData],
+    ticketAddData: defaultTicketAddData,
   },
   action
 ) => {
@@ -19,6 +29,20 @@ const tickets = (
       return {
         ...state,
         isRequesting: true
+      };
+    case TICKETS_ADD_SUCCESS:
+      state.data.push(action.newTicket)
+      return {
+        ...state,
+        isRequesting: false
+      };
+    case ADD_TICKET_TITLE_CHANGE:
+      return {
+        ...state,
+        ticketAddData: {
+          ...state.ticketAddData,
+          title: action.title
+        }
       };
     default:
       return state;

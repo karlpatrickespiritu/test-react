@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Ticket from "./Ticket";
 import TicketForm from "./components/tickets/ticket/form"
 import {connect} from 'react-redux';
+import {addTicket, addTicketTitleChange} from "./services/actions/tickets";
 
 const styles = {
   container: {
@@ -26,18 +27,27 @@ class App extends Component {
 
   constructor(props) {
     super(props)
-    const { dispatch } = this.props
+  }
+
+  onSubmit = (e) => {
+    e.preventDefault()
+    this.props.dispatch(addTicket())
+  }
+
+  onTitleKeyChange = (e) => {
+    this.props.dispatch(addTicketTitleChange(e.target.value))
   }
 
   render() {
-    const { tickets, ticketsIsRequesting } = this.props
-    console.log({ tickets, ticketsIsRequesting })
+    const { tickets, ticketsIsRequesting, ticketAddData } = this.props
+    // console.log({ tickets, ticketsIsRequesting, ticketAddData })
     return (
       <div>
-        <TicketForm onSubmit={(e) => {
-          e.preventDefault()
-          console.log('ha')
-        }}/>
+        <TicketForm
+          onSubmit={this.onSubmit}
+          onTitleKeyChange={this.onTitleKeyChange}
+          ticketAddData={ticketAddData}
+        />
         <br />
         <div style={styles.container}>
           <div style={styles.box}>
@@ -62,7 +72,8 @@ class App extends Component {
 
 const mapStateToProps = (state) => ({
   ticketsIsRequesting: state.tickets.isRequesting,
-  tickets: state.tickets.data
+  tickets: state.tickets.data,
+  ticketAddData: state.tickets.ticketAddData,
 })
 
 export default connect(mapStateToProps)(App)
