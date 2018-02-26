@@ -5,7 +5,7 @@ import Loader from "./components/Loader"
 import {connect} from 'react-redux';
 import {
   addTicket, addTicketTitleChange, STATUS_CLOSE, STATUS_DONE,
-  STATUS_IN_PROGRESS
+  STATUS_IN_PROGRESS, ticketChangeStatus
 } from "./services/actions/tickets";
 
 const styles = {
@@ -42,8 +42,12 @@ class App extends Component {
     this.props.dispatch(addTicketTitleChange(e.target.value))
   }
 
-  onDone = () => {
+  onDone = (ticket) => {
+    this.props.dispatch(ticketChangeStatus(ticket.id, STATUS_DONE))
+  }
 
+  changeStatus = (ticket, status) => {
+    this.props.dispatch(ticketChangeStatus(ticket.id, status))
   }
 
   render() {
@@ -53,7 +57,9 @@ class App extends Component {
     const closed = (ticket) => ticket.status === STATUS_CLOSE
     const ticketComponent = (ticket) => (
       <Ticket
-        // onDone={this.onDone}
+        onDone={(ticket) => this.changeStatus(ticket, STATUS_DONE)}
+        onNotFix={(ticket) => this.changeStatus(ticket, STATUS_IN_PROGRESS)}
+        onClose={(ticket) => this.changeStatus(ticket, STATUS_CLOSE)}
         key={ticket.id}
         ticket={ticket}/>
     )

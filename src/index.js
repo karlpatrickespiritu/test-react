@@ -22,9 +22,9 @@ let store = createStoreWithMiddleware(
 render(
   <Provider store={store}>
     <BrowserRouter>
-        <Switch>
-          <Route exact path='/' component={App} />
-        </Switch>
+      <Switch>
+        <Route exact path='/' component={App} />
+      </Switch>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

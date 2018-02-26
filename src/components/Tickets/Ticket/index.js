@@ -30,10 +30,21 @@ class Ticket extends Component {
   }
 
   onClickDone = (e) => {
+    const { ticket, onDone } = this.props
+    onDone(ticket)
     e.preventDefault()
-    const { dispatch, ticket } = this.props
-    console.log('ha', ticket)
-    // dispatch()
+  }
+
+  onClickNotFix = (e) => {
+    const { ticket, onNotFix } = this.props
+    onNotFix(ticket)
+    e.preventDefault()
+  }
+
+  onClickClose = (e) => {
+    const { ticket, onClose } = this.props
+    onClose(ticket)
+    e.preventDefault()
   }
 
   render() {
@@ -44,8 +55,8 @@ class Ticket extends Component {
         <h4>{ticket.title}</h4>
         <div>
           <button onClick={this.onClickDone}>Done</button>
-          <button>Not Fix</button>
-          <button>Close</button>
+          <button onClick={this.onClickNotFix}>Not Fix</button>
+          <button onClick={this.onClickClose}>Close</button>
         </div>
       </div>
     );

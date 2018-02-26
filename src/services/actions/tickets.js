@@ -8,6 +8,8 @@ export const TICKETS_ADD_REQUEST = 'TICKETS_IN_PROGRESS_REQUEST'
 export const TICKETS_ADD_SUCCESS = 'TICKETS_IN_PROGRESS_SUCCESS'
 export const TICKETS_ADD_FAILURE = 'TICKETS_IN_PROGRESS_FAILURE'
 
+export const TICKET_CHANGE_STATUS = 'TICKET_CHANGE_STATUS'
+
 export const ADD_TICKET_TITLE_CHANGE = 'ADD_TICKET_TITLE_CHANGE'
 
 export const addTicketTitleChange = (title) => ({
@@ -36,4 +38,11 @@ export const addTicketReceive = (newTicket) => ({
 
 export const addTicketFail = () => ({
   type: TICKETS_ADD_FAILURE
+})
+
+
+export const ticketChangeStatus = (id, status) => ({
+  type: TICKET_CHANGE_STATUS,
+  id,
+  status
 })
