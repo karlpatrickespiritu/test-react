@@ -18,27 +18,32 @@ const styles = {
 class Ticket extends Component {
   static propTypes = {
     ticket: PropTypes.object,
-    onClickDone: PropTypes.func,
-    onClickNotFix: PropTypes.func,
-    onClickClose: PropTypes.func,
+    onDone: PropTypes.func,
+    onNotFix: PropTypes.func,
+    onClose: PropTypes.func,
   }
 
   static defaultProps = {
-    onClickDone: () => {},
-    onClickNotFix: () => {},
-    onClickClose: () => {},
+    onDone: () => {},
+    onNotFix: () => {},
+    onClose: () => {},
+  }
+
+  onClickDone = (e) => {
+    e.preventDefault()
+    const { dispatch, ticket } = this.props
+    console.log('ha', ticket)
+    // dispatch()
   }
 
   render() {
-    const { ticket } = this.props;
+    const { ticket, onDone } = this.props;
 
     return (
       <div style={styles.ticket} >
-        {/* Ticket description */}
         <h4>{ticket.title}</h4>
-        {/* Ticket actions [Done/Not Fix/Close]. Modify to display them properly */}
         <div>
-          <button>Done</button>
+          <button onClick={this.onClickDone}>Done</button>
           <button>Not Fix</button>
           <button>Close</button>
         </div>

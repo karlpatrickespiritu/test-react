@@ -42,19 +42,21 @@ class App extends Component {
     this.props.dispatch(addTicketTitleChange(e.target.value))
   }
 
-  render() {
-    // console.log({ tickets, isRequesting, ticketAddData })
+  onDone = () => {
 
+  }
+
+  render() {
     const { tickets, isRequesting, ticketAddData } = this.props
     const inProgress = (ticket) => ticket.status === STATUS_IN_PROGRESS
     const done = (ticket) => ticket.status === STATUS_DONE
     const closed = (ticket) => ticket.status === STATUS_CLOSE
     const ticketComponent = (ticket) => (
       <Ticket
+        // onDone={this.onDone}
         key={ticket.id}
         ticket={ticket}/>
     )
-
     const inProgressTickets = tickets.filter(inProgress).map(ticketComponent)
     const doneTickets = tickets.filter(done).map(ticketComponent)
     const closedTickets = tickets.filter(closed).map(ticketComponent)

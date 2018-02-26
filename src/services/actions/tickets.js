@@ -1,4 +1,4 @@
-import hash from "../utils/hash";
+import Ticket from "../http/Tickets";
 
 export const STATUS_IN_PROGRESS = 0
 export const STATUS_DONE = 1
@@ -17,13 +17,12 @@ export const addTicketTitleChange = (title) => ({
 
 export const addTicket = key => (dispatch, getState) => {
   dispatch(addTicketRequest())
-  setTimeout(() => {
-    // let's say we got the new added ticket from the server
-    let newTicket = getState().tickets.ticketAddData
-    newTicket.id = hash.generateSimple()
 
-    dispatch(addTicketReceive(newTicket))
-  }, 2000)
+  let ticket = getState().tickets.ticketAddData
+
+  Ticket.add(ticket)
+    .then(newTicket => dispatch(addTicketReceive(newTicket)))
+    .catch(fail => console.error('server failed.', fail))
 }
 
 export const addTicketRequest = () => ({
