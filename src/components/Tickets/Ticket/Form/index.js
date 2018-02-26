@@ -8,6 +8,11 @@ class TicketForm extends Component {
     onSubmit: PropTypes.func.isRequired,
     onTitleKeyChange: PropTypes.func.isRequired,
     ticketAddData: PropTypes.object.isRequired,
+    isRequesting: PropTypes.bool,
+  }
+
+  static defaultPropTypes = {
+    isRequesting: false,
   }
 
   constructor(props) {
@@ -15,7 +20,7 @@ class TicketForm extends Component {
   }
 
   render() {
-    const { onSubmit, onTitleKeyChange, ticketAddData } = this.props
+    const { onSubmit, onTitleKeyChange, ticketAddData, isRequesting } = this.props
     return (
       <form
         name="search"
@@ -28,7 +33,7 @@ class TicketForm extends Component {
           style={{ borderRadius: "3px" }}
         />
         <button type="submit" style={{ cursor: "pointer" }}>
-          ADD
+          {!isRequesting ? "ADD": "Adding..."}
         </button>
       </form>
     )

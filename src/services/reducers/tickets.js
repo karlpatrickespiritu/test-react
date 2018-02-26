@@ -36,7 +36,8 @@ const tickets = (
       state.data.push(action.newTicket)
       return {
         ...state,
-        isRequesting: false
+        isRequesting: false,
+        ticketAddData: defaultTicketAddData
       };
     case TICKETS_ADD_FAILURE:
       return {

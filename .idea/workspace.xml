@@ -4,9 +4,7 @@
     <list default="true" id="169479e4-86ef-4d06-94e5-1edee0c62ff5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tickets/Ticket/index.js" afterPath="$PROJECT_DIR$/src/components/Tickets/Ticket/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/actions/tickets.js" afterPath="$PROJECT_DIR$/src/services/actions/tickets.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Tickets/Ticket/Form/index.js" afterPath="$PROJECT_DIR$/src/components/Tickets/Ticket/Form/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/services/reducers/tickets.js" afterPath="$PROJECT_DIR$/src/services/reducers/tickets.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,14 +22,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Tickets/Ticket/index.js">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="462">
+              <caret line="76" column="50" lean-forward="true" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -44,17 +40,13 @@
       <find>pro</find>
       <find>TicketForm</find>
       <find>STATUS_IN_PROGRESS</find>
-      <find>onSubmit</find>
       <find>ticketAddData</find>
       <find>onTitleKeyChange</find>
       <find>title</find>
       <find>ADD_TICKET_TITLE_CHANGE</find>
       <find>state</find>
-      <find>TICKETS_ADD_SUCCESS</find>
-      <find>addTicketReceive</find>
       <find>PropTypes</find>
       <find>Ticket</find>
-      <find>isRequesting</find>
       <find>isLoading</find>
       <find>tickets</find>
       <find>Tickets</find>
@@ -70,6 +62,10 @@
       <find>3isRequesting</find>
       <find>onClickDone</find>
       <find>onChangeStatus</find>
+      <find>onSubmit</find>
+      <find>isRequesting</find>
+      <find>addTicketReceive</find>
+      <find>TICKETS_ADD_SUCCESS</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -91,9 +87,11 @@
         <option value="$PROJECT_DIR$/src/services/http/Tickets.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/services/actions/tickets.js" />
+        <option value="$PROJECT_DIR$/src/components/Tickets/Ticket/index.js" />
+        <option value="$PROJECT_DIR$/src/components/Tickets/Ticket/Form/index.js" />
+        <option value="$PROJECT_DIR$/src/Requirements.md" />
         <option value="$PROJECT_DIR$/src/services/reducers/tickets.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/Tickets/Ticket/index.js" />
       </list>
     </option>
   </component>
@@ -118,7 +116,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1235" />
+    <option name="width" value="1550" />
     <option name="height" value="1388" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -245,6 +243,13 @@
               <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="reducers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="test-react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test-react" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="utils" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -305,7 +310,7 @@
       <workItem from="1519605237686" duration="491000" />
       <workItem from="1519605863650" duration="7021000" />
       <workItem from="1519613510924" duration="3202000" />
-      <workItem from="1519617834327" duration="2014000" />
+      <workItem from="1519617834327" duration="2549000" />
     </task>
     <task id="LOCAL-00001" summary="add ticket functionality">
       <created>1519613613394</created>
@@ -342,22 +347,29 @@
       <option name="project" value="LOCAL" />
       <updated>1519615954048</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="change statuses">
+      <created>1519620860606</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1519620860607</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12728000" />
+    <option name="totallyTimeSpent" value="13263000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1235" height="1388" extended-state="0" />
+    <frame x="0" y="23" width="1550" height="1388" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18387097" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -384,11 +396,12 @@
     <MESSAGE value="refactors" />
     <MESSAGE value="tickets by status" />
     <MESSAGE value="modified ticket to a promise" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified ticket to a promise" />
+    <MESSAGE value="change statuses" />
+    <option name="LAST_COMMIT_MESSAGE" value="change statuses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -471,20 +484,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/utils/hash.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Tickets/Ticket/Form/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="1" column="48" lean-forward="true" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ticket.js" />
+    <entry file="file://$PROJECT_DIR$/src/components/Loader/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
           <folding>
-            <marker date="1519613139000" expanded="true" signature="13:80" ph="{...}" />
+            <marker date="1519614363000" expanded="true" signature="7:74" ph="..." />
+            <marker date="1519614363000" expanded="true" signature="107:333" ph="{...}" />
+            <marker date="1519614363000" expanded="true" signature="130:165" ph="{&quot;isLoading&quot;: PropTypes.bool...}" />
+            <marker date="1519614363000" expanded="true" signature="191:217" ph="{...}" />
+            <marker date="1519614363000" expanded="true" signature="230:331" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Tickets/Ticket/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+          <folding>
+            <marker date="1519619586000" expanded="true" signature="7:77" ph="..." />
+            <marker date="1519619586000" expanded="true" signature="94:345" ph="{...}" />
+            <marker date="1519619586000" expanded="true" signature="106:343" ph="{&quot;border&quot;: &quot;1px solid ##ccc&quot;...}" />
+            <marker date="1519619586000" expanded="true" signature="379:1352" ph="{...}" />
+            <marker date="1519619586000" expanded="true" signature="402:524" ph="{&quot;ticket&quot;: PropTypes.object...}" />
+            <marker date="1519619586000" expanded="true" signature="550:624" ph="{...}" />
+            <marker date="1519619586000" expanded="true" signature="649:738" ph="{...}" />
+            <marker date="1519619586000" expanded="true" signature="765:858" ph="{...}" />
+            <marker date="1519619586000" expanded="true" signature="884:975" ph="{...}" />
+            <marker date="1519619586000" expanded="true" signature="988:1350" ph="{...}" />
+            <marker date="1519619586000" expanded="true" signature="1053:1339" ph="&lt;div/&gt;" />
+            <marker date="1519619586000" expanded="true" signature="1122:1326" ph="&lt;div/&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/createServiceWorker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="17" column="55" lean-forward="true" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
+        <state relative-caret-position="444">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
             <marker date="1504697464000" expanded="true" signature="82:371" ph="//..." />
             <marker date="1504697464000" expanded="true" signature="373:523" ph="//..." />
@@ -507,42 +553,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tickets/Ticket/Form/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Tickets/Ticket/Form/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="25" column="37" lean-forward="true" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        <state relative-caret-position="669">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
           <folding>
-            <marker date="1519611905000" expanded="true" signature="7:131" ph="..." />
-            <marker date="1519611905000" expanded="true" signature="168:864" ph="{...}" />
-            <marker date="1519611905000" expanded="true" signature="191:334" ph="{&quot;onSubmit&quot;: PropTypes.func.isRequired...}" />
-            <marker date="1519611905000" expanded="true" signature="357:379" ph="{...}" />
-            <marker date="1519611905000" expanded="true" signature="392:862" ph="{...}" />
-            <marker date="1519611905000" expanded="true" signature="482:852" ph="&lt;form/&gt;" />
-            <marker date="1519611905000" expanded="true" signature="588:745" ph="&lt;input/&gt;" />
-            <marker date="1519611905000" expanded="true" signature="754:838" ph="&lt;button/&gt;" />
-            <marker date="1519611905000" expanded="true" signature="902:928" ph="{&quot;search&quot;: state.search...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Ticket.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Loader/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <marker date="1519614363000" expanded="true" signature="7:74" ph="..." />
-            <marker date="1519614363000" expanded="true" signature="107:333" ph="{...}" />
-            <marker date="1519614363000" expanded="true" signature="130:165" ph="{&quot;isLoading&quot;: PropTypes.bool...}" />
-            <marker date="1519614363000" expanded="true" signature="191:217" ph="{...}" />
-            <marker date="1519614363000" expanded="true" signature="230:331" ph="{...}" />
+            <marker date="1519621228000" expanded="true" signature="7:131" ph="..." />
+            <marker date="1519621228000" expanded="true" signature="168:1005" ph="{...}" />
+            <marker date="1519621228000" expanded="true" signature="191:368" ph="{&quot;onSubmit&quot;: PropTypes.func.isRequired...}" />
+            <marker date="1519621228000" expanded="true" signature="398:428" ph="{...}" />
+            <marker date="1519621228000" expanded="true" signature="451:473" ph="{...}" />
+            <marker date="1519621228000" expanded="true" signature="486:1003" ph="{...}" />
+            <marker date="1519621228000" expanded="true" signature="590:993" ph="&lt;form/&gt;" />
+            <marker date="1519621228000" expanded="true" signature="696:853" ph="&lt;input/&gt;" />
+            <marker date="1519621228000" expanded="true" signature="862:979" ph="&lt;button/&gt;" />
+            <marker date="1519621228000" expanded="true" signature="1043:1069" ph="{&quot;search&quot;: state.search...}" />
           </folding>
         </state>
       </provider>
@@ -550,24 +575,11 @@
     <entry file="file://$PROJECT_DIR$/src/Requirements.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="143">
-            <caret line="11" column="73" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="73" />
+          <first_editor relative-caret-position="510">
+            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/http/Tickets.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <marker date="1519615853000" expanded="true" signature="50:235" ph="{...}" />
-            <marker date="1519615853000" expanded="true" signature="71:233" ph="{...}" />
-            <marker date="1519615853000" expanded="true" signature="117:228" ph="{...}" />
-            <marker date="1519615853000" expanded="true" signature="182:215" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -582,9 +594,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/utils/hash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding>
+            <marker date="1519613139000" expanded="true" signature="13:80" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
+        <state relative-caret-position="505">
           <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
           <folding>
             <marker date="1519616000000" expanded="true" signature="7:373" ph="..." />
@@ -596,38 +618,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/reducers/tickets.js">
+    <entry file="file://$PROJECT_DIR$/src/services/http/Tickets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="46" />
+        <state relative-caret-position="306">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
-            <marker date="1519619284000" expanded="true" signature="7:219" ph="..." />
-            <marker date="1519619284000" expanded="true" signature="245:319" ph="{&quot;title&quot;: 'Go Home'...}" />
-            <marker date="1519619284000" expanded="true" signature="349:406" ph="{&quot;id&quot;: null...}" />
-            <marker date="1519619284000" expanded="true" signature="436:538" ph="{&quot;ticketAddData&quot;: defaultTicketAddData...}" />
-            <marker date="1519619284000" expanded="true" signature="554:1495" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="579:1493" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="628:697" ph="..." />
-            <marker date="1519619284000" expanded="true" signature="642:696" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="727:837" ph="..." />
-            <marker date="1519619284000" expanded="true" signature="781:836" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="867:937" ph="..." />
-            <marker date="1519619284000" expanded="true" signature="881:936" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="999:1140" ph="..." />
-            <marker date="1519619284000" expanded="true" signature="1013:1139" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="1056:1131" ph="{&quot;title&quot;: action.title...}" />
-            <marker date="1519619284000" expanded="true" signature="1193:1456" ph="..." />
-            <marker date="1519619284000" expanded="true" signature="1239:1415" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="1430:1456" ph="{...}" />
-            <marker date="1519619284000" expanded="true" signature="1469:1489" ph="..." />
+            <marker date="1519615853000" expanded="true" signature="50:235" ph="{...}" />
+            <marker date="1519615853000" expanded="true" signature="71:233" ph="{...}" />
+            <marker date="1519615853000" expanded="true" signature="117:228" ph="{...}" />
+            <marker date="1519615853000" expanded="true" signature="182:215" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/services/actions/tickets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+        <state relative-caret-position="629">
+          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="27" />
           <folding>
             <marker date="1519618448000" expanded="true" signature="505:549" ph="{&quot;type&quot;: ADD_TICKET_TITLE_CHANGE...}" />
             <marker date="1519618448000" expanded="true" signature="608:833" ph="{...}" />
@@ -639,44 +646,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
+    <entry file="file://$PROJECT_DIR$/src/services/reducers/tickets.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+        <state relative-caret-position="510">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
-            <marker date="1519619533000" expanded="false" signature="7:376" ph="..." />
-            <marker date="1519619533000" expanded="true" signature="393:571" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="408:433" ph="{&quot;display&quot;: &quot;flex&quot;...}" />
-            <marker date="1519619533000" expanded="true" signature="442:569" ph="{&quot;flex&quot;: &quot;0 1 33%&quot;...}" />
-            <marker date="1519619533000" expanded="true" signature="536:565" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="602:2649" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="625:630" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="656:661" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="684:706" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="728:793" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="823:890" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="915:988" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="1027:1095" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="1108:2647" ph="{...}" />
-            <marker date="1519619533000" expanded="true" signature="1415:1687" ph="&lt;Ticket/&gt;" />
-            <marker date="1519619533000" expanded="true" signature="1928:2636" ph="&lt;div/&gt;" />
-            <marker date="1519619533000" expanded="true" signature="1942:2090" ph="&lt;TicketForm/&gt;" />
-            <marker date="1519619533000" expanded="true" signature="2157:2623" ph="&lt;div/&gt;" />
-            <marker date="1519619533000" expanded="true" signature="2198:2335" ph="&lt;div/&gt;" />
-            <marker date="1519619533000" expanded="true" signature="2346:2470" ph="&lt;div/&gt;" />
-            <marker date="1519619533000" expanded="true" signature="2481:2608" ph="&lt;div/&gt;" />
-            <marker date="1519619533000" expanded="true" signature="2687:2811" ph="{&quot;isRequesting&quot;: state.tickets.isRequesting...}" />
+            <marker date="1519621364000" expanded="true" signature="7:219" ph="..." />
+            <marker date="1519621364000" expanded="true" signature="245:319" ph="{&quot;title&quot;: 'Go Home'...}" />
+            <marker date="1519621364000" expanded="true" signature="349:406" ph="{&quot;id&quot;: null...}" />
+            <marker date="1519621364000" expanded="true" signature="436:538" ph="{&quot;ticketAddData&quot;: defaultTicketAddData...}" />
+            <marker date="1519621364000" expanded="true" signature="554:1540" ph="{...}" />
+            <marker date="1519621364000" expanded="true" signature="579:1538" ph="{...}" />
+            <marker date="1519621364000" expanded="true" signature="628:697" ph="..." />
+            <marker date="1519621364000" expanded="true" signature="642:696" ph="{...}" />
+            <marker date="1519621364000" expanded="true" signature="727:882" ph="..." />
+            <marker date="1519621364000" expanded="true" signature="781:881" ph="{&quot;ticketAddData&quot;: defaultTicketAddData...}" />
+            <marker date="1519621364000" expanded="true" signature="912:982" ph="..." />
+            <marker date="1519621364000" expanded="true" signature="926:981" ph="{...}" />
+            <marker date="1519621364000" expanded="true" signature="1044:1185" ph="..." />
+            <marker date="1519621364000" expanded="true" signature="1058:1184" ph="{...}" />
+            <marker date="1519621364000" expanded="true" signature="1101:1176" ph="{&quot;title&quot;: action.title...}" />
+            <marker date="1519621364000" expanded="true" signature="1238:1501" ph="..." />
+            <marker date="1519621364000" expanded="true" signature="1284:1460" ph="{...}" />
+            <marker date="1519621364000" expanded="true" signature="1475:1501" ph="{...}" />
+            <marker date="1519621364000" expanded="true" signature="1514:1534" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Tickets/Ticket/index.js">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="462">
+          <caret line="76" column="50" lean-forward="true" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>

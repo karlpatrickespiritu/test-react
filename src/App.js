@@ -35,7 +35,10 @@ class App extends Component {
 
   onSubmit = (e) => {
     e.preventDefault()
-    this.props.dispatch(addTicket())
+    const { dispatch, ticketAddData } = this.props
+    if (ticketAddData.title && ticketAddData.title !== '') {
+      dispatch(addTicket())
+    }
   }
 
   onTitleKeyChange = (e) => {
@@ -73,8 +76,9 @@ class App extends Component {
           onSubmit={this.onSubmit}
           onTitleKeyChange={this.onTitleKeyChange}
           ticketAddData={ticketAddData}
+          isRequesting={isRequesting}
         />
-        <Loader isLoading={isRequesting}/>
+        {/*<Loader isLoading={isRequesting}/>*/}
         <br />
         <div style={styles.container}>
           <div style={styles.box}>
