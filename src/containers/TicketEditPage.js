@@ -23,6 +23,12 @@ class TicketEditPage extends Component {
     return ticket ? ticket : false
   }
 
+  onSubmit = (values) => {
+    const { dispatch } = this.props
+    dispatch(updateTicket(values))
+    this.props.history.push('/')
+  }
+
   render() {
     const { dispatch } = this.props
     const ticket = this.getTicketByRoute()
@@ -30,7 +36,7 @@ class TicketEditPage extends Component {
         <div className="row">
           <div className="col-md-6 col-md-offset-3">
             <TicketUpdateForm
-              onSubmit={(values) => dispatch(updateTicket(values))}
+              onSubmit={this.onSubmit}
               ticket={ticket}/>
           </div>
         </div>
