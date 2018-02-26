@@ -24,6 +24,7 @@ class TicketUpdateForm extends Component {
 
   componentWillMount() {
     const { ticket } = this.props
+    console.log(ticket)
     this.setState({
       id: ticket.id,
       title: ticket.title,
@@ -37,20 +38,27 @@ class TicketUpdateForm extends Component {
     })
   }
 
+  onSubmit = (e) => {
+    e.preventDefault()
+    if (this.state.title && this.state.title !== '') {
+      this.props.onSubmit({ values: this.state })
+    }
+  }
+
   render() {
     const { onSubmit } = this.props
     const { id, title, status } = this.state
     return (
       <form
         className="form-group"
-        onSubmit={(e) => onSubmit(e)}>
+        onSubmit={this.onSubmit}>
         <input type="hidden" value={id}/>
         <div>
           <label>Description</label>
-          <input name="desc" value={title} onChange={(e) => this.setState({ title: e.target.value })}/>
+          <input name="desc" value={title} onChange={(e) => this.setState({ title: e.target.value })} required/>
         </div>
         <div>
-          <select class="form-control" value={status} onChange={(e) => this.setState({ status: e.target.value})}>
+          <select className="form-control" value={status} onChange={(e) => this.setState({ status: e.target.value})}>
             <option></option>
             <option value={STATUS_IN_PROGRESS}>IN PROGRESS</option>
             <option value={STATUS_DONE}>DONE</option>

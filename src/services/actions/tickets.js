@@ -4,20 +4,43 @@ export const STATUS_IN_PROGRESS = 0
 export const STATUS_DONE = 1
 export const STATUS_CLOSE = 2
 
-export const TICKETS_ADD_REQUEST = 'TICKETS_IN_PROGRESS_REQUEST'
-export const TICKETS_ADD_SUCCESS = 'TICKETS_IN_PROGRESS_SUCCESS'
-export const TICKETS_ADD_FAILURE = 'TICKETS_IN_PROGRESS_FAILURE'
+export const TICKETS_ADD_REQUEST = 'TICKETS_ADD_REQUEST'
+export const TICKETS_ADD_SUCCESS = 'TICKETS_ADD_SUCCESS'
+export const TICKETS_ADD_FAILURE = 'TICKETS_ADD_FAILURE'
+
+export const TICKETS_UPDATE_REQUEST = 'TICKETS_UPDATE_REQUEST'
+export const TICKETS_UPDATE_SUCCESS = 'TICKETS_UPDATE_SUCCESS'
+export const TICKETS_UPDATE_FAILURE = 'TICKETS_UPDATE_FAILURE'
 
 export const TICKET_CHANGE_STATUS = 'TICKET_CHANGE_STATUS'
-
 export const ADD_TICKET_TITLE_CHANGE = 'ADD_TICKET_TITLE_CHANGE'
 
+// UPDATE TICKET
+export const updateTicket = updatedTicket => (dispatch, getState) => {
+  dispatch(updateTicketRequest())
+  dispatch(updateTicketReceive(updatedTicket))
+}
+
+export const updateTicketRequest = () => ({
+  type: TICKETS_UPDATE_REQUEST
+})
+
+export const updateTicketReceive = (updatedTicket) => ({
+  type: TICKETS_UPDATE_SUCCESS,
+  updatedTicket
+})
+
+export const updateTicketFail = () => ({
+  type: TICKETS_UPDATE_FAILURE
+})
+
+// ADD
 export const addTicketTitleChange = (title) => ({
   type: ADD_TICKET_TITLE_CHANGE,
   title
 })
 
-export const addTicket = key => (dispatch, getState) => {
+export const addTicket = () => (dispatch, getState) => {
   dispatch(addTicketRequest())
 
   let ticket = getState().tickets.ticketAddData

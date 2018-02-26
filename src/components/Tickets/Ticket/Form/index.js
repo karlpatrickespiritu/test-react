@@ -30,6 +30,7 @@ class TicketForm extends Component {
           value={ticketAddData.title}
           type="text"
           style={{ borderRadius: "3px" }}
+          required
         />
         <button type="submit" style={{ cursor: "pointer" }}>
           {!isRequesting ? "Add": "Adding..."}

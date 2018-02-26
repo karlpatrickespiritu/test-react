@@ -1,7 +1,7 @@
 import {
   STATUS_IN_PROGRESS, TICKETS_ADD_REQUEST, ADD_TICKET_TITLE_CHANGE,
   TICKETS_ADD_SUCCESS, TICKETS_ADD_FAILURE, STATUS_DONE,
-  TICKET_CHANGE_STATUS
+  TICKET_CHANGE_STATUS, TICKETS_UPDATE_REQUEST, TICKETS_UPDATE_SUCCESS, TICKETS_UPDATE_FAILURE
 } from "../actions/tickets";
 import hash from "../utils/hash";
 
@@ -40,6 +40,27 @@ const tickets = (
         ticketAddData: defaultTicketAddData
       };
     case TICKETS_ADD_FAILURE:
+      return {
+        ...state,
+        isRequesting: false
+      };
+
+    // UPDATE TICKET
+    case TICKETS_UPDATE_REQUEST:
+      return {
+        ...state,
+        isRequesting: true
+      };
+    case TICKETS_UPDATE_SUCCESS:
+      const { updatedTicket } = action
+      // state.data.map(ticket => ticket.id === updatedTicket.id ? updatedTicket : ticket)
+      const foundIndex = state.data.findIndex(ticket => ticket.id === updatedTicket.id);
+      state.data[foundIndex] = updatedTicket;
+      return {
+        ...state,
+        isRequesting: false,
+      };
+    case TICKETS_UPDATE_FAILURE:
       return {
         ...state,
         isRequesting: false
