@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {connect} from 'react-redux';
+import { Link } from 'react-router-dom'
 import TicketUpdateForm from "../components/Tickets/Ticket/UpdateForm/index";
 import {updateTicket} from "../services/actions/tickets";
 
@@ -16,24 +17,24 @@ class TicketEditPage extends Component {
   }
 
   getTicketByRoute() {
-    const { match, tickets } = this.props
+    const {match, tickets} = this.props
     const ticketId = match.params.ticket
     const ticket = tickets.find((ticket) => ticket.id === ticketId)
-    return ticket ? ticket: {}
+    return ticket ? ticket : false
   }
 
   render() {
     const { dispatch } = this.props
     const ticket = this.getTicketByRoute()
-    return (
-      <div className="row">
-        <div className="col-md-6 col-md-offset-3">
-          <TicketUpdateForm
-            onSubmit={({ values }) => dispatch(updateTicket(values))}
-            ticket={ticket}/>
+    return ticket ?
+        <div className="row">
+          <div className="col-md-6 col-md-offset-3">
+            <TicketUpdateForm
+              onSubmit={(values) => dispatch(updateTicket(values))}
+              ticket={ticket}/>
+          </div>
         </div>
-      </div>
-    );
+      : <p>Ticket not found.. <Link to="/">Go back</Link>.</p>;
   }
 }
 

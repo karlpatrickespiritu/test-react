@@ -32,21 +32,15 @@ class TicketUpdateForm extends Component {
     })
   }
 
-  onChangeStatus(e) {
-    this.setState({
-      status: e.target.value
-    })
-  }
-
   onSubmit = (e) => {
     e.preventDefault()
-    if (this.state.title && this.state.title !== '') {
-      this.props.onSubmit({ values: this.state })
+    if (!this.state.title) {
+      return
     }
+    this.props.onSubmit(this.state)
   }
 
   render() {
-    const { onSubmit } = this.props
     const { id, title, status } = this.state
     return (
       <form

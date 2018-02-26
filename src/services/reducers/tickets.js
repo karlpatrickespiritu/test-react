@@ -53,7 +53,7 @@ const tickets = (
       };
     case TICKETS_UPDATE_SUCCESS:
       const { updatedTicket } = action
-      // state.data.map(ticket => ticket.id === updatedTicket.id ? updatedTicket : ticket)
+      updatedTicket.status = parseInt(updatedTicket.status, 10)
       const foundIndex = state.data.findIndex(ticket => ticket.id === updatedTicket.id);
       state.data[foundIndex] = updatedTicket;
       return {
