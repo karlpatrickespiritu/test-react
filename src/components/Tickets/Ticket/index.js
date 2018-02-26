@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import {STATUS_CLOSE, STATUS_DONE, STATUS_IN_PROGRESS} from "../../../services/actions/tickets";
 
 const styles = {
   ticket: {
@@ -48,15 +49,17 @@ class Ticket extends Component {
   }
 
   render() {
-    const { ticket, onDone } = this.props;
-
+    const { ticket } = this.props;
+    const showDone = ticket.status === STATUS_IN_PROGRESS;
+    const showInProgress = ticket.status === STATUS_DONE;
+    const showClose = ticket.status === STATUS_DONE || ticket.status === STATUS_IN_PROGRESS;
     return (
       <div style={styles.ticket} >
         <h4>{ticket.title}</h4>
         <div>
-          <button onClick={this.onClickDone}>Done</button>
-          <button onClick={this.onClickNotFix}>Not Fix</button>
-          <button onClick={this.onClickClose}>Close</button>
+          {showDone && <button onClick={this.onClickDone}>Done</button>}
+          {showInProgress && <button onClick={this.onClickNotFix}>Not Fix</button>}
+          {showClose && <button onClick={this.onClickClose}>Close</button>}
         </div>
       </div>
     );

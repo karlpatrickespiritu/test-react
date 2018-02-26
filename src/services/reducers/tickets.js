@@ -8,7 +8,7 @@ import hash from "../utils/hash";
 let defaultTicketData = {
   id: hash.generateSimple(),
   title: 'Go Home',
-  status: STATUS_DONE
+  status: STATUS_IN_PROGRESS
 };
 
 let defaultTicketAddData = {
