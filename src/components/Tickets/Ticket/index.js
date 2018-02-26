@@ -54,8 +54,9 @@ class Ticket extends Component {
     const showDone = ticket.status === STATUS_IN_PROGRESS;
     const showInProgress = ticket.status === STATUS_DONE;
     const showClose = ticket.status === STATUS_DONE || ticket.status === STATUS_IN_PROGRESS;
+    const isTicketClosed = ticket.status === STATUS_CLOSE
     return (
-      <Link to={`/ticket/${ticket.id}`} style={styles.ticket} >
+      <Link to={!isTicketClosed ? `/ticket/${ticket.id}`: `#`} style={styles.ticket} >
         <h4>{ticket.title}</h4>
         <div>
           {showDone && <button onClick={this.onClickDone}>Done</button>}
