@@ -23,7 +23,7 @@ export const addTicket = key => (dispatch, getState) => {
     newTicket.id = hash.generateSimple()
 
     dispatch(addTicketReceive(newTicket))
-  }, 1000)
+  }, 2000)
 }
 
 export const addTicketRequest = () => ({

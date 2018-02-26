@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Ticket from "./Ticket";
 import TicketForm from "./components/tickets/ticket/form"
+import Loader from "./components/Loader"
 import {connect} from 'react-redux';
 import {addTicket, addTicketTitleChange} from "./services/actions/tickets";
 
@@ -39,8 +40,8 @@ class App extends Component {
   }
 
   render() {
-    const { tickets, ticketsIsRequesting, ticketAddData } = this.props
-    // console.log({ tickets, ticketsIsRequesting, ticketAddData })
+    const { tickets, isRequesting, ticketAddData } = this.props
+    // console.log({ tickets, isRequesting, ticketAddData })
     return (
       <div>
         <TicketForm
@@ -48,6 +49,7 @@ class App extends Component {
           onTitleKeyChange={this.onTitleKeyChange}
           ticketAddData={ticketAddData}
         />
+        <Loader isLoading={isRequesting}/>
         <br />
         <div style={styles.container}>
           <div style={styles.box}>
@@ -71,7 +73,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  ticketsIsRequesting: state.tickets.isRequesting,
+  isRequesting: state.tickets.isRequesting,
   tickets: state.tickets.data,
   ticketAddData: state.tickets.ticketAddData,
 })
