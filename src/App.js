@@ -4,7 +4,7 @@ import TicketForm from "./components/Tickets/Ticket/Form"
 import Loader from "./components/Loader"
 import {connect} from 'react-redux';
 import {
-  addTicket, addTicketTitleChange, STATUS_CLOSE, STATUS_DONE,
+  addTicket, addTicketTitleChange, onTicketChangeStatus, STATUS_CLOSE, STATUS_DONE,
   STATUS_IN_PROGRESS, ticketChangeStatus
 } from "./services/actions/tickets";
 
@@ -46,7 +46,8 @@ class App extends Component {
   }
 
   changeStatus = (ticket, status) => {
-    this.props.dispatch(ticketChangeStatus(ticket.id, status))
+    // this.props.dispatch(ticketChangeStatus(ticket.id, status))
+    this.props.dispatch(onTicketChangeStatus(ticket.id, status))
   }
 
   render() {

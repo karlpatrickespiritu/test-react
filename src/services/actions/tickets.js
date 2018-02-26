@@ -69,17 +69,21 @@ export const ticketChangeStatus = (id, status) => ({
   status
 })
 
-// export const ticketChangeStatus = (id, status) => {
-//   // if (status === STATUS_DONE) {
-//   //   setTimeout(() => dispatch())
-//   // }
-//
-//   return {
-//     type: TICKET_CHANGE_STATUS,
-//     id,
-//     status
-//   }
-// }
+export const onTicketChangeStatus = (id, status) => (dispatch, getState) => {
+  dispatch(ticketChangeStatus(id, status))
+  if (status === STATUS_DONE) {
+    console.log('ha')
+    setTimeout(() => {
+      // get latest status of ticket
+      const autoCloseTicket = getState().tickets.data.filter((ticket) => ticket.id === id && ticket.status === STATUS_DONE)
+      console.log(autoCloseTicket)
+      // update if has not changed since done
+      if (autoCloseTicket.length) {
+        dispatch(ticketChangeStatus(id, STATUS_CLOSE))
+      }
+    }, 5000)
+  }
+}
 
 // export const ticketChangeStatus = (id, status) => (dispatch, getState) => {
 //   return {

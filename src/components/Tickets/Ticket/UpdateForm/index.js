@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types';
-import hash from "../../../../services/utils/hash";
 import {STATUS_CLOSE, STATUS_DONE, STATUS_IN_PROGRESS} from "../../../../services/actions/tickets";
 
 class TicketUpdateForm extends Component {
@@ -47,6 +46,7 @@ class TicketUpdateForm extends Component {
         className="form-group"
         onSubmit={this.onSubmit}>
         <input type="hidden" value={id}/>
+        <h2>Update Ticket</h2>
         <div>
           <label>Description</label>
           <input name="desc" value={title} onChange={(e) => this.setState({ title: e.target.value })} required/>
