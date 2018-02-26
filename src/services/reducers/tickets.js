@@ -1,13 +1,13 @@
 import {
   STATUS_IN_PROGRESS, TICKETS_ADD_REQUEST, ADD_TICKET_TITLE_CHANGE,
-  TICKETS_ADD_SUCCESS
+  TICKETS_ADD_SUCCESS, STATUS_DONE
 } from "../actions/tickets";
 import hash from "../utils/hash";
 
 let defaultTicketData = {
   id: hash.generateSimple(),
   title: 'Go Home',
-  status: STATUS_IN_PROGRESS
+  status: STATUS_DONE
 };
 
 let defaultTicketAddData = {

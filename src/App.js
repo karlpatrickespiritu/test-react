@@ -3,7 +3,10 @@ import Ticket from "./components/Tickets/Ticket";
 import TicketForm from "./components/Tickets/Ticket/Form"
 import Loader from "./components/Loader"
 import {connect} from 'react-redux';
-import {addTicket, addTicketTitleChange} from "./services/actions/tickets";
+import {
+  addTicket, addTicketTitleChange, STATUS_CLOSE, STATUS_DONE,
+  STATUS_IN_PROGRESS
+} from "./services/actions/tickets";
 
 const styles = {
   container: {
@@ -40,8 +43,22 @@ class App extends Component {
   }
 
   render() {
-    const { tickets, isRequesting, ticketAddData } = this.props
     // console.log({ tickets, isRequesting, ticketAddData })
+
+    const { tickets, isRequesting, ticketAddData } = this.props
+    const inProgress = (ticket) => ticket.status === STATUS_IN_PROGRESS
+    const done = (ticket) => ticket.status === STATUS_DONE
+    const closed = (ticket) => ticket.status === STATUS_CLOSE
+    const ticketComponent = (ticket) => (
+      <Ticket
+        key={ticket.id}
+        ticket={ticket}/>
+    )
+
+    const inProgressTickets = tickets.filter(inProgress).map(ticketComponent)
+    const doneTickets = tickets.filter(done).map(ticketComponent)
+    const closedTickets = tickets.filter(closed).map(ticketComponent)
+
     return (
       <div>
         <TicketForm
@@ -54,17 +71,15 @@ class App extends Component {
         <div style={styles.container}>
           <div style={styles.box}>
             <label style={styles.box.label}>IN-PROGRESS</label>
-            {tickets.map((ticket) => {
-              return <Ticket key={ticket.id} ticket={ticket}/>
-            })}
+            {inProgressTickets}
           </div>
           <div style={styles.box}>
             <label style={styles.box.label}>DONE</label>
-            {/** show Done tickets below */}
+            {doneTickets}
           </div>
           <div style={styles.box}>
             <label style={styles.box.label}>CLOSE</label>
-            {/** show Close tickets below */}
+            {closedTickets}
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import hash from "../utils/hash";
 
 export const STATUS_IN_PROGRESS = 0
-export const STATUS_DONE = 0
-export const STATUS_CLOSE = 0
+export const STATUS_DONE = 1
+export const STATUS_CLOSE = 2
 
 export const TICKETS_ADD_REQUEST = 'TICKETS_IN_PROGRESS_REQUEST'
 export const TICKETS_ADD_SUCCESS = 'TICKETS_IN_PROGRESS_SUCCESS'
