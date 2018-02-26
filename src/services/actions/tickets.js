@@ -40,9 +40,28 @@ export const addTicketFail = () => ({
   type: TICKETS_ADD_FAILURE
 })
 
-
 export const ticketChangeStatus = (id, status) => ({
   type: TICKET_CHANGE_STATUS,
   id,
   status
 })
+
+// export const ticketChangeStatus = (id, status) => {
+//   // if (status === STATUS_DONE) {
+//   //   setTimeout(() => dispatch())
+//   // }
+//
+//   return {
+//     type: TICKET_CHANGE_STATUS,
+//     id,
+//     status
+//   }
+// }
+
+// export const ticketChangeStatus = (id, status) => (dispatch, getState) => {
+//   return {
+//     type: TICKET_CHANGE_STATUS,
+//     id,
+//     status
+//   }
+// }

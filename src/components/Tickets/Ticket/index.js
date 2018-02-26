@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Link } from 'react-router-dom'
 import {STATUS_CLOSE, STATUS_DONE, STATUS_IN_PROGRESS} from "../../../services/actions/tickets";
 
 const styles = {
@@ -54,14 +55,14 @@ class Ticket extends Component {
     const showInProgress = ticket.status === STATUS_DONE;
     const showClose = ticket.status === STATUS_DONE || ticket.status === STATUS_IN_PROGRESS;
     return (
-      <div style={styles.ticket} >
+      <Link to={`/ticket/${ticket.id}`} style={styles.ticket} >
         <h4>{ticket.title}</h4>
         <div>
           {showDone && <button onClick={this.onClickDone}>Done</button>}
           {showInProgress && <button onClick={this.onClickNotFix}>Not Fix</button>}
           {showClose && <button onClick={this.onClickClose}>Close</button>}
         </div>
-      </div>
+      </Link>
     );
   }
 }

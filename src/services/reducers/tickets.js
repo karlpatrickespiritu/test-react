@@ -63,6 +63,7 @@ const tickets = (
           ? { ...ticket, status: action.status }
           : ticket
       })
+
       return {
         ...state
       }

@@ -7,6 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Route } from 'react-router'
 import { BrowserRouter, Switch } from 'react-router-dom'
 import thunkMiddleware from 'redux-thunk';
+import TicketEditPage from "./containers/TicketEditPage";
 
 const middleware = [
   thunkMiddleware
@@ -24,6 +25,7 @@ render(
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={App} />
+        <Route exact path="/ticket/:ticket" component={TicketEditPage} />
       </Switch>
     </BrowserRouter>
   </Provider>,

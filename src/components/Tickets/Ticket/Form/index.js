@@ -23,7 +23,6 @@ class TicketForm extends Component {
     const { onSubmit, onTitleKeyChange, ticketAddData, isRequesting } = this.props
     return (
       <form
-        name="search"
         className="form-group"
         onSubmit={(e) => onSubmit(e)}>
         <input
@@ -33,7 +32,7 @@ class TicketForm extends Component {
           style={{ borderRadius: "3px" }}
         />
         <button type="submit" style={{ cursor: "pointer" }}>
-          {!isRequesting ? "ADD": "Adding..."}
+          {!isRequesting ? "Add": "Adding..."}
         </button>
       </form>
     )
